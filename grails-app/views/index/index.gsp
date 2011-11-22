@@ -8,6 +8,7 @@
       <div id="content">
          <div id="content-body">
             <div id="content-text">
+               <div id="display-area"></div>
             </div>
          </div>
       </div>
@@ -17,9 +18,7 @@
       <div id="nav-content">
          <ul id="nav-list">
             <g:each in="${pages}" var="page">
-               <li id="link-page-${page.id}"><a href="#page-${page.id }">
-                     ${page.title }
-               </a></li>
+               <li id="link-page-${page.id}"><g:remoteLink update="display-area" controller="page" action="render" id="${page.id }">${page.title }</g:remoteLink></li>
             </g:each>
             <li id="link-contact"><a href="#contact">Contact</a></li>
             <li id="link-blog"><a href="#blog">Blog</a></li>

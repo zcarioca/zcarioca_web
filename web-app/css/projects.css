@@ -1,0 +1,27 @@
+#content-page-86 ul {
+  list-style: none;
+  margin: 0px; 
+  padding: 0px;
+  display: block;
+}
+
+#content-page-86 ul a:link, #content-page-86 ul a:visited {
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: none;
+  color: yellow;
+}
+
+#content-page-86 ul a:hover, #content-page-86 ul a:active {
+  text-decoration: underline;
+}
+
+#content-page-86 ul li {
+  display: inline-block;
+  margin-bottom: 2em;
+}
+
+#content-page-86 img {
+  margin: 5px;
+  margin-left: 0px;
+}

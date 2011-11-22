@@ -1,0 +1,41 @@
+#emailform {
+  padding: 15px;
+}
+
+.section, .submit_section {
+  width: 475px;
+}
+
+.submit_section {
+  text-align: right;
+}
+
+.section {
+  margin-bottom: 10px;
+}
+
+#emailform label {
+  display: block;
+}
+
+#emailform input, #emailform textarea {
+  width: 471px;
+  font-size: 11pt;
+}
+
+#send_email {
+  padding: 3px 10px;
+  margin: 0px;
+}
+
+span.error {
+  padding-left: 5px;
+  color: red;
+  font-size: 80%;
+}
+
+#response, $response-error {
+  padding: 0px 15px;
+  color: yellow;
+}
+#response-error { color: red; }

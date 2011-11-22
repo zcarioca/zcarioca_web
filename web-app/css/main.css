@@ -1,273 +1,142 @@
-html * {
-    margin: 0;
-    /*padding: 0; SELECT NOT DISPLAYED CORRECTLY IN FIREFOX */
+html, body {
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  color: white;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 12pt;
 }
-
-/* GENERAL */
-
-.spinner {
-    padding: 5px;
-    position: absolute;
-    right: 0;
-}
-
-body {
-    background: #fff;
-    color: #333;
-    font: 11px verdana, arial, helvetica, sans-serif;
-}
-#grailsLogo {
-	padding:20px;
-}
-
-a:link, a:visited, a:hover {
-    color: #666;
-    font-weight: bold;
-    text-decoration: none;
-}
-
 h1 {
-    color: #48802c;
-    font-weight: normal;
-    font-size: 16px;
-    margin: .8em 0 .3em 0;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 15pt;
+  color: yellow;
+  margin: 0px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding: 5px 0px;
+  border-bottom: 1px yellow solid;
 }
-
-ul {
-    padding-left: 15px;
+p {
+  margin-top: 0; 
 }
-
-input, select, textarea {
-    background-color: #fcfcfc;
-    border: 1px solid #ccc;
-    font: 11px verdana, arial, helvetica, sans-serif;
-    margin: 2px 0;
-    padding: 2px 4px;
+dl {
+  position: absolute;
+  bottom: 10px;
+  padding-right: 20px;
+  font-size: 80%;
 }
-select {
-   padding: 2px 2px 2px 0;
+dt {
+  color: yellow;
 }
-textarea {
-	width: 250px;
-	height: 150px;
-	vertical-align: top;
+dd {
 }
-
-input:focus, select:focus, textarea:focus {
-    border: 1px solid #b2d1ff;
+blockquote {
+  margin: 0;
+  margin-left: 1.5em;
+  padding-left: 1.5em;
+  font-family: monospace;
+  font-size: 90%;
+  line-height: 1.3em;
+  border-left: 7px yellow solid;
 }
-
-.body {
-    float: left;
-    margin: 0 15px 10px 15px;
+#body {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
-
-/* NAVIGATION MENU */
-
-.nav {
-    background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
-    border: 1px solid #ccc;
-    border-style: solid none solid none;
-    margin-top: 5px;
-    padding: 7px 12px;
+#page-body {
+  width: 100%;
+  height: 85%;
 }
-
-.menuButton {
-    font-size: 10px;
-    padding: 0 5px;
+#nav-bar {
+  height: 60px;
+  width: 100%;
 }
-.menuButton a {
-    color: #333;
-    padding: 4px 6px;
+#nav-content, .nav-border {
+  width: 100%;
 }
-.menuButton a.home {
-    background: url(../images/skin/house.png) center left no-repeat;
-    color: #333;
-    padding-left: 25px;
+.nav-border {
+  height: 3px;
+  background-color: black;
 }
-.menuButton a.list {
-    background: url(../images/skin/database_table.png) center left no-repeat;
-    color: #333;
-    padding-left: 25px;
+#nav-content {
+  height: 54px;
+  background: transparent url('../images/nav_bg.png') repeat-y;
 }
-.menuButton a.create {
-    background: url(../images/skin/database_add.png) center left no-repeat;
-    color: #333;
-    padding-left: 25px;
+#nav-content #nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+  float: left;
 }
-
-/* MESSAGES AND ERRORS */
-
-.message {
-    background: #f3f8fc url(../images/skin/information.png) 8px 50% no-repeat;
-    border: 1px solid #b2d1ff;
-    color: #006dba;
-    margin: 10px 0 5px 0;
-    padding: 5px 5px 5px 30px
+#nav-content #nav-list li {
+  float: left;
+  display: block;
+  height: 54px;
+  margin: 0;
 }
-
-div.errors {
-    background: #fff3f3;
-    border: 1px solid red;
-    color: #cc0000;
-    margin: 10px 0 5px 0;
-    padding: 5px 0 5px 0;
+#nav-content #nav-list a:link, #nav-content #nav-list a:visited {
+  display: inline-block;
+  padding: 15px 2.1em;
+  color: white;
+  text-decoration: none;
 }
-div.errors ul {
-    list-style: none;
-    padding: 0;
+#nav-content #nav-list a:hover, #nav-content #nav-list a:active, #nav-content #nav-list li.active a {
+  color: yellow;
 }
-div.errors li {
-	background: url(../images/skin/exclamation.png) 8px 0% no-repeat;
-    line-height: 16px;
-    padding-left: 30px;
+#content {
+  position: absolute;
+  width: 80%;
+  height: 70%;
+  left: 50%;
+  top: 7%;
+  padding: 20px 0px;
+  margin-left: -40%;
+  margin-top: -20px;
+  background-color: black;
+  overflow: hidden;
+  line-height: 1.5em;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  opacity: 0.85;
+  filter: alpha(opacity=85);
 }
-
-td.errors select {
-    border: 1px solid red;
+#content-body {
+  height: 100%;
+  margin: 0px 20px;
 }
-td.errors input {
-    border: 1px solid red;
+#content-text {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }
-td.errors textarea {
-    border: 1px solid red;
+#content-text .content-object {
 }
-
-/* TABLES */
-
-table {
-    border: 1px solid #ccc;
-    width: 100%
+#bg, #bg table, #bg td {
+  height: 100%;
+  width: 100%;
 }
-tr {
-    border: 0;
+#bg div {
+  position: absolute;
+  z-index: 1;
+  height: 200%;
+  width: 200%;
+  top: -100%;
+  left: -100%;
 }
-td, th {
-    font: 11px verdana, arial, helvetica, sans-serif;
-    line-height: 12px;
-    padding: 5px 6px;
-    text-align: left;
-    vertical-align: top;
+#bg td {
+  text-align: center;
+  vertical-align: middle;
 }
-th {
-    background: #fff url(../images/skin/shadow.jpg);
-    color: #666;
-    font-size: 11px;
-    font-weight: bold;
-    line-height: 17px;
-    padding: 2px 6px;
-}
-th a:link, th a:visited, th a:hover {
-    color: #333;
-    display: block;
-    font-size: 10px;
-    text-decoration: none;
-    width: 100%;
-}
-th.asc a, th.desc a {
-    background-position: right;
-    background-repeat: no-repeat;
-}
-th.asc a {
-    background-image: url(../images/skin/sorted_asc.gif);
-}
-th.desc a {
-    background-image: url(../images/skin/sorted_desc.gif);
-}
-
-.odd {
-    background: #f7f7f7;
-}
-.even {
-    background: #fff;
-}
-
-/* LIST */
-
-.list table {
-    border-collapse: collapse;
-}
-.list th, .list td {
-    border-left: 1px solid #ddd;
-}
-.list th:hover, .list tr:hover {
-    background: #b2d1ff;
-}
-
-/* PAGINATION */
-
-.paginateButtons {
-    background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
-    border: 1px solid #ccc;
-    border-top: 0;
-    color: #666;
-    font-size: 10px;
-    overflow: hidden;
-    padding: 10px 3px;
-}
-.paginateButtons a {
-    background: #fff;
-    border: 1px solid #ccc;
-    border-color: #ccc #aaa #aaa #ccc;
-    color: #666;
-    margin: 0 3px;
-    padding: 2px 6px;
-}
-.paginateButtons span {
-    padding: 2px 3px;
-}
-
-/* DIALOG */
-
-.dialog table {
-    padding: 5px 0;
-}
-
-.prop {
-    padding: 5px;
-}
-.prop .name {
-    text-align: left;
-    width: 15%;
-    white-space: nowrap;
-}
-.prop .value {
-    text-align: left;
-    width: 85%;
-}
-
-/* ACTION BUTTONS */
-
-.buttons {
-    background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
-    border: 1px solid #ccc;
-    color: #666;
-    font-size: 10px;
-    margin-top: 5px;
-    overflow: hidden;
-    padding: 0;
-}
-
-.buttons input {
-    background: #fff;
-    border: 0;
-    color: #333;
-    cursor: pointer;
-    font-size: 10px;
-    font-weight: bold;
-    margin-left: 3px;
-    overflow: visible;
-    padding: 2px 6px;
-}
-.buttons input.delete {
-    background: transparent url(../images/skin/database_delete.png) 5px 50% no-repeat;
-    padding-left: 28px;
-}
-.buttons input.edit {
-    background: transparent url(../images/skin/database_edit.png) 5px 50% no-repeat;
-    padding-left: 28px;
-}
-.buttons input.save {
-    background: transparent url(../images/skin/database_save.png) 5px 50% no-repeat;
-    padding-left: 28px;
+#bg img {
+  position: absolute;
+  margin: 0 auto;
+  width: 50%;
+  bottom: 0;
+  right: 0;
 }

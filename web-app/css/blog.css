@@ -1,0 +1,208 @@
+#blog-nav-menu {
+  position: absolute;
+  width: 200px;
+  top: 18px;
+  right: -210px;
+  background-color: #ffabff;
+  border: 2px solid black;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  opacity: 0.90;
+  filter: alpha(opacity=90);
+}
+.sidebar-menu {
+  margin: 10px;
+  color: black;
+}
+.sidebar-title {
+  font-weight: bold;
+}
+#blog-nav-menu ul {
+  padding: 0;
+  margin: 0px 0px 5px 10px;
+  list-style: none;
+  display: block;
+  float: left;
+}
+#blog-nav-menu li {
+  display: block;
+  width: 196px;
+  margin: 3px 0px;
+  float: left;
+}
+#blog-nav-menu li a:link, #blog-nav-menu li a:visited {
+  color: black;
+  float: left;
+  width: 196px;
+  font-size: 90%;
+  text-decoration: none;
+}
+#blog-nav-menu li a:hover, #blog-nav-menu li a:active {
+  text-decoration: underline;
+}
+.nav-blog {
+  display: none;
+}
+#nav-search {
+  float: left;
+  height: 44px;
+}
+#nav-search input {
+  height: 18px;
+  margin: 13px;
+}
+#nav-content #nav-sub-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: left;
+}
+#nav-content #nav-sub-list li {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.2em;
+}
+#nav-content #nav-sub-list a:link, #nav-content #nav-sub-list a:visited {
+  padding: 0px 1.5em; 
+  color: white;
+  text-decoration: none;
+}
+#nav-content #nav-sub-list a:hover, #nav-content #nav-sub-list a:active, #nav-content #nav-sub-list li.active a {
+  color: yellow;
+}
+#blog-posts {
+  display: none;
+}
+#blog-posts a:visited, #blog-posts a:link {
+  color: yellow;
+  text-decoration: none;
+}
+#blog-posts a:hover, #blog-posts a:active {
+  text-decoration: underline;
+}
+.post {
+  display: block;
+  padding-bottom: 15px;
+}
+.post a:link, .post a:visited {
+  color: yellow;
+  float: left;
+  text-decoration: none;
+}
+.post a:hover, .post a:active {
+  text-decoration: underline;
+}
+.post-date {
+  display: block;
+  float: right;
+  font-size: 10pt;
+  padding-right: 10px;
+}
+.post-author {
+  display: block;
+  float: left;
+  margin-left: 15px;
+  font-size: 10pt;
+  padding-top: 2px;
+}
+.post-excerpt {
+  clear: both;
+  width: 85%;
+}
+.preloader {
+  width: 100%;
+}
+.preloader img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -32px;
+  margin-left: -32px;
+}
+.post-navbar {
+  width: 100%;
+  display: block;
+  padding: 0;
+}
+.post-navbar div {
+  display: block;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 1em;
+  width: 50px;
+}
+.post-title {
+  clear: both;
+  width: 95%;
+  display: block;
+  font-size: 120%;
+  font-weight: bold;
+  margin-bottom: 1em;
+  border-top: 3px solid yellow;
+  padding-top: 0.2em;
+}
+.content-area {
+  clear: both;
+  width: 95%;
+  display: block;
+  text-align: left;
+}
+.left, .left-empty {
+  float: left;
+}
+.left {
+  background: url('../images/arrows.png') no-repeat -24px 0;
+}
+.right, .right-empty {
+  float: right;
+  margin-right: 10px;
+  text-align: right;
+}
+.right {
+  background: url('../images/arrows.png') no-repeat 74px 0;
+}
+.comments-section {
+  border-top: 3px solid yellow;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: 95%;
+}
+.comment {
+  margin-left: 1.2em;
+  font-size: 11pt;
+}
+.comment-author {
+  font-weight: bold;
+}
+.comment-date {
+  float: right;
+}
+.comment-content {
+  padding-bottom: 1.5em;
+  clear: both;
+}
+.comment-reply {
+  display: inline;
+  margin-left: 2em;
+}
+.reply-link {
+  color: yellow;
+  cursor: pointer;
+}
+.comment-form-section {
+  width: 100%;
+  font-size: 11pt;
+}
+.comment-form-section label {
+  display: block;
+}
+.comment-form-section input.text, .comment-form-section textarea {
+  width: 50%;
+}
+blockquote.clodeblock, .codeblock {
+  font-size: 90%;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
