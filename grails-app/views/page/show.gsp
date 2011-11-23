@@ -44,6 +44,26 @@
                         </tr>
                     
                         <tr class="prop">
+                            <td valign="top" class="name"><g:message code="page.pageOrder.label" default="Page Order" /></td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean: pageInstance, field: "pageOrder")}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="page.attachments.label" default="Attachments" /></td>
+                            
+                            <td valign="top" style="text-align: left;" class="value">
+                                <ul>
+                                <g:each in="${pageInstance.attachments}" var="a">
+                                    <li><g:link controller="image" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
+                                </g:each>
+                                </ul>
+                            </td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
                             <td valign="top" class="name"><g:message code="page.dateAdded.label" default="Date Added" /></td>
                             
                             <td valign="top" class="value"><g:formatDate date="${pageInstance?.dateAdded}" /></td>

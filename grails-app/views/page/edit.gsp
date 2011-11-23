@@ -51,6 +51,31 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
+                                  <label for="pageOrder"><g:message code="page.pageOrder.label" default="Page Order" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: pageInstance, field: 'pageOrder', 'errors')}">
+                                    <g:textField name="pageOrder" value="${fieldValue(bean: pageInstance, field: 'pageOrder')}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="attachments"><g:message code="page.attachments.label" default="Attachments" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: pageInstance, field: 'attachments', 'errors')}">
+                                    
+<ul>
+<g:each in="${pageInstance?.attachments?}" var="a">
+    <li><g:link controller="image" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
+</g:each>
+</ul>
+<g:link controller="image" action="create" params="['page.id': pageInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'image.label', default: 'Image')])}</g:link>
+
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
                                   <label for="dateAdded"><g:message code="page.dateAdded.label" default="Date Added" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: pageInstance, field: 'dateAdded', 'errors')}">

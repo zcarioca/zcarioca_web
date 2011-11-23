@@ -28,6 +28,8 @@
                         
                             <g:sortableColumn property="content" title="${message(code: 'page.content.label', default: 'Content')}" />
                         
+                            <g:sortableColumn property="pageOrder" title="${message(code: 'page.pageOrder.label', default: 'Page Order')}" />
+                        
                             <g:sortableColumn property="dateAdded" title="${message(code: 'page.dateAdded.label', default: 'Date Added')}" />
                         
                             <g:sortableColumn property="dateModified" title="${message(code: 'page.dateModified.label', default: 'Date Modified')}" />
@@ -43,6 +45,8 @@
                             <td>${fieldValue(bean: pageInstance, field: "title")}</td>
                         
                             <td>${fieldValue(bean: pageInstance, field: "content")}</td>
+                        
+                            <td>${fieldValue(bean: pageInstance, field: "pageOrder")}</td>
                         
                             <td><g:formatDate date="${pageInstance.dateAdded}" /></td>
                         

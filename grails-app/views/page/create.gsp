@@ -1,5 +1,3 @@
-
-
 <%@ page import="com.zcarioca.website.Page" %>
 <html>
     <head>
@@ -7,6 +5,14 @@
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'page.label', default: 'Page')}" />
         <title><g:message code="default.create.label" args="[entityName]" /></title>
+        <g:javascript library="jquery" plugin="jquery"/>
+        <g:javascript library="addFile"/>
+        <g:javascript>
+           var number = 1;
+           function addFile() {
+              number = addFileUpload('uploader_section', 'image', number, 'change', addFile);
+           }
+        </g:javascript>
     </head>
     <body>
         <div class="nav">
@@ -23,7 +29,7 @@
                 <g:renderErrors bean="${pageInstance}" as="list" />
             </div>
             </g:hasErrors>
-            <g:form action="save" >
+            <g:form action="save" enctype="multipart/form-data">
                 <div class="dialog">
                     <table>
                         <tbody>
@@ -34,6 +40,17 @@
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: pageInstance, field: 'title', 'errors')}">
                                     <g:textField name="title" maxlength="140" value="${pageInstance?.title}" />
+                                </td>
+                            </tr>
+                            
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="image"><g:message code="page.attachments.label" default="Images"/></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: pageInstance, field: 'attachments', 'errors') }">
+                                    <div id="uploader_section">
+                                    <input onchange="addFile()" type="file" name="image.1"/>
+                                    </div>
                                 </td>
                             </tr>
                         
@@ -48,19 +65,10 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="dateAdded"><g:message code="page.dateAdded.label" default="Date Added" /></label>
+                                    <label for="pageOrder"><g:message code="page.pageOrder.label" default="Page Order" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: pageInstance, field: 'dateAdded', 'errors')}">
-                                    <g:datePicker name="dateAdded" precision="day" value="${pageInstance?.dateAdded}"  />
-                                </td>
-                            </tr>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="dateModified"><g:message code="page.dateModified.label" default="Date Modified" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: pageInstance, field: 'dateModified', 'errors')}">
-                                    <g:datePicker name="dateModified" precision="day" value="${pageInstance?.dateModified}"  />
+                                <td valign="top" class="value ${hasErrors(bean: pageInstance, field: 'pageOrder', 'errors')}">
+                                    <g:textField name="pageOrder" value="${pageInstance?.pageOrder}" />
                                 </td>
                             </tr>
                         
