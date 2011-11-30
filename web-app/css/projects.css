@@ -1,27 +1,27 @@
-#content-page-86 ul {
+ul.projects-list {
   list-style: none;
   margin: 0px; 
   padding: 0px;
   display: block;
 }
 
-#content-page-86 ul a:link, #content-page-86 ul a:visited {
+ul.projects-list a:link, ul.projects-list a:visited {
   font-style: italic;
   font-weight: bold;
   text-decoration: none;
   color: yellow;
 }
 
-#content-page-86 ul a:hover, #content-page-86 ul a:active {
+ul.projects-list a:hover, ul.projects-list a:active {
   text-decoration: underline;
 }
 
-#content-page-86 ul li {
+ul.projects-list li {
   display: inline-block;
   margin-bottom: 2em;
 }
 
-#content-page-86 img {
+ul.projects-list img {
   margin: 5px;
   margin-left: 0px;
 }
